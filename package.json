@@ -1,0 +1,16 @@
+{
+  "name": "com.evuapp.resumebuilder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dhrubajyoti Rakshit",
+  "license": "ISC",
+  "description": "",
+  "private": true,
+  "workspaces": ["api", "ui"],
+  "scripts": {
+
+  },
+  "dependencies": {
+
+  }
+}
