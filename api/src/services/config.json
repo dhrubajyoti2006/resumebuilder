@@ -1,0 +1,19 @@
+{
+  "header": {
+    "columnWidths": [10, 45, 45],
+    "fontFamily": "Cambria",
+    "defaultFontSize": 10.5,
+    "tagsFontSize": 12,
+    "contactFontSize": 12,
+    "nameAndContactColor": "153D63",
+    "tagsColor": "156082"
+  },
+  "section": {
+    "fontFamily": "Cambria",
+    "titleFontSize": 11,
+    "contentFontSize": 10.5,
+    "titleColor": "000000",
+    "titleAlignment": "center",
+    "titleUnderline": "dashed"
+  }
+}
