@@ -4,14 +4,14 @@
 import { Document, Packer } from 'docx';
 import { writeFileSync } from 'fs';
 import * as path from 'path';
-import { createHeader } from './Header';
-import { createSection } from './Section';
-import * as config from './config.json';
 import { HeaderData } from '../types/HeaderData';
 import { SectionData } from '../types/SectionData';
 
 // Import data from data.json
-import * as data from './data.json';
+import * as data from "../data/data.json";
+import {createSection} from "../templates/default/sections/Section";
+import {createHeader} from "../templates/default/Header";
+import * as config from "../templates/default/config.json";
 
 export async function generateDoc(): Promise<void> {
     // Access header data and sections from data.json

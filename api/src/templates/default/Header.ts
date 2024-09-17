@@ -14,8 +14,8 @@ import {
 } from 'docx';
 import { readFileSync } from 'fs';
 import * as path from 'path';
-import { HeaderData } from '../types/HeaderData';
-import { HeaderConfig } from '../types/HeaderConfig';
+import { HeaderData } from '../../types/HeaderData';
+import { HeaderConfig } from '../../types/HeaderConfig';
 
 export function createHeader(data: HeaderData, config: HeaderConfig): Table {
     const { name, imageUrl, tags, contact } = data;
