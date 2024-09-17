@@ -21,21 +21,23 @@ export function createTitledBulletedListSection(
     // Create items with title and bulleted content
     sectionData.items.forEach((item) => {
         // Add the title for each item (e.g., job role and company details)
-        contentParagraphs.push(
-            new Paragraph({
-                alignment: AlignmentType.LEFT,
-                children: [
-                    new TextRun({
-                        text: item.title,
-                        bold: true,
-                        font: fontFamily,
-                        size: contentFontSize * 2,
-                        color: titleColor,
-                    }),
-                ],
-                spacing: { after: 100 },
-            })
-        );
+        if (item.title.trim()) {
+            contentParagraphs.push(
+                new Paragraph({
+                    alignment: AlignmentType.LEFT,
+                    children: [
+                        new TextRun({
+                            text: item.title,
+                            bold: true,
+                            font: fontFamily,
+                            size: contentFontSize * 2,
+                            color: titleColor,
+                        }),
+                    ],
+                    spacing: { after: 100 },
+                })
+            );
+        }
 
         // If content length is 1, don't use bullets
         if (item.content.length === 1) {

@@ -2,12 +2,12 @@
 
 // @ts-nocheck
 
-import {Paragraph, TextRun, BorderStyle, AlignmentType, PageBreak} from 'docx';
+import {AlignmentType, BorderStyle, PageBreak, Paragraph, TextRun} from 'docx';
 import {SectionData} from '../types/SectionData';
 import {SectionConfig} from '../types/SectionConfig';
-import {createBulletListSection} from './BulletListSection';
 import {createMultiColumnBulletedListSection} from './MultiColumnBulletedListSection';
-import {createTitledBulletedListSection} from "./TitledBulletedListSection";
+import {createTitledBulletedListSection} from "./Default";
+import {createLabelValueSection} from "./LabelValueSection";
 
 export function createSection(
     sectionData: SectionData,
@@ -56,31 +56,6 @@ export function createSection(
 
     let contentParagraphs: Paragraph[] = [];
 
-    // Handle 'text' section type
-    if (type === 'text') {
-        const contentLines = sectionData.content.split('\n\n');
-        contentParagraphs = contentLines.map(
-            (line) =>
-                new Paragraph({
-                    alignment: AlignmentType.JUSTIFIED,
-                    children: [
-                        new TextRun({
-                            text: line,
-                            font: fontFamily,
-                            size: contentFontSize * 2,
-                            color: titleColor,
-                        }),
-                    ],
-                    spacing: {after: 200},
-                })
-        );
-    }
-
-    // Handle 'bulletedList' section type
-    if (type === 'bulletedList') {
-        contentParagraphs = createBulletListSection(sectionData, config);
-    }
-
     // Handle 'multiColumnBulletedList' section type
     if (type === 'multiColumnBulletedList') {
         contentParagraphs = createMultiColumnBulletedListSection(sectionData, config);
@@ -95,8 +70,12 @@ export function createSection(
         ];
     }
 
-    if (type === 'titledBulletedList') {
+    if (type === 'default') {
         contentParagraphs = createTitledBulletedListSection(sectionData, config);
+    }
+
+    if (sectionData.type === 'labelValue') {
+        contentParagraphs = createLabelValueSection(sectionData, config);
     }
 
     // Return the title paragraph followed by the content paragraphs
