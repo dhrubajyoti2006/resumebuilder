@@ -1,6 +1,7 @@
 import "dotenv/config";
 import OpenAI from "openai";
 import { generateDoc } from './generator';
+import data from "../data/data.json"
 
 // The const openai is needed when Assistant Api is called
 const openai = new OpenAI({
@@ -30,7 +31,7 @@ export class ExampleService {
     }
 
     public static async get(id: string) {
-        return "Get response from server";
+        return data;
     }
 
     public static async update(updatePayload: UpdatePayload) {
