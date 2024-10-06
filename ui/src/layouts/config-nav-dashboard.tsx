@@ -1,13 +1,13 @@
-import { paths } from 'src/routes/paths';
+import {paths} from 'src/routes/paths';
 
-import { CONFIG } from 'src/config-global';
+import {CONFIG} from 'src/config-global';
 
-import { SvgColor } from 'src/components/svg-color';
+import {SvgColor} from 'src/components/svg-color';
 
 // ----------------------------------------------------------------------
 
 const icon = (name: string) => (
-  <SvgColor src={`${CONFIG.site.basePath}/assets/icons/navbar/${name}.svg`} />
+  <SvgColor src={`${CONFIG.site.basePath}/assets/icons/navbar/${name}.svg`}/>
 );
 
 const ICONS = {
@@ -39,36 +39,18 @@ const ICONS = {
   parameter: icon('ic-parameter'),
 };
 
-// ----------------------------------------------------------------------
+// --------------------------------------------------------------------------------------
 
 export const navData = [
   /**
    * Overview
    */
   {
-    subheader: 'Overview 6.0.0',
+    subheader: '',    // Here you can have a subheader
     items: [
-      { title: 'One', path: paths.dashboard.root, icon: ICONS.dashboard },
-      { title: 'Two', path: paths.dashboard.two, icon: ICONS.ecommerce },
-      { title: 'Three', path: paths.dashboard.three, icon: ICONS.analytics },
-    ],
-  },
-  /**
-   * Management
-   */
-  {
-    subheader: 'Management',
-    items: [
-      {
-        title: 'Group',
-        path: paths.dashboard.group.root,
-        icon: ICONS.user,
-        children: [
-          { title: 'Four', path: paths.dashboard.group.root },
-          { title: 'Five', path: paths.dashboard.group.five },
-          { title: 'Six', path: paths.dashboard.group.six },
-        ],
-      },
+      {title: 'Profile', path: paths.dashboard.profile, icon: ICONS.ecommerce},
+      {title: 'Resumes', path: paths.dashboard.resume, icon: ICONS.dashboard},
+      {title: 'Resume Templates', path: paths.dashboard.resumeTemplate, icon: ICONS.dashboard}, // Remove it from here. There should be another section for this
     ],
   },
 ];

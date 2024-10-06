@@ -1,0 +1,169 @@
+export const profileData = {
+  "headerData": {
+    "name": "Dhrubajyoti Rakshit",
+    "imageUrl": "../src/generated/Dhrubajyoti Rakshit - Small.png",
+    "tags": [
+      "Development Manager",
+      "Development (Engineering) Manager",
+      "AI Enthusiast",
+      "15 Years Experience"
+    ],
+    "contact": {
+      "email": "dhrubajyoti.rakshit@gmail.com",
+      "mobile": "+4915166585500",
+      "linkedin": "https://www.linkedin.com/in/dhrubajyotirakshit",
+      "location": "Walldorf, Germany"
+    }
+  },
+  "sections": [
+    {
+      "title": "Objective",
+      "type": "default",
+      "items": [
+        {
+          "title": "",
+          "content": [
+            "TOGAF Certified Development Manager with 15+ years of experience leading cross-functional teams in global, multi-location environments. A tech enthusiast with a proven track record in setting up a multi-cultural development team of 13 members in Walldorf, starting from its inception. Specialized in working with onsite/offshore models and responsible for establishing development environments, including DevOps and release pipelines. Expertise includes Fiori, SAPUI5, React, mobile app development using Flutter and Firebase, and full-stack development. Currently seeking roles such as Development Manager, Engineering Manager, Solution Architect, Product Owner, Product Manager, or AI Solution Architect.\n\nWith over 12 years of experience in SAPUI5/Fiori, I've contributed to roles ranging from developer to Solution Architect, delivering high-end solutions to customers. I have extensive experience in product development and customer handling and currently serve as the Technical Development Manager, overseeing the UI development of five products.\n\nI am also passionate about AI-driven development and automation, primarily through self-study and proof-of-concept (POC) projects. With hands-on experience in OpenAI Assistant and Langchain, I have created and deployed AI-driven assistants that leverage OpenAI’s capabilities to enhance automation workflows. Additionally, I have developed mobile applications using Flutter for both Android and iOS, supported by backend services in Node.js and deployed on Google Cloud Platform, demonstrating my full-stack and cloud development proficiency."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Profile Summary",
+      "type": "default",
+      "items": [
+        {
+          "title": "",
+          "content": [
+            "Enterprising & Result-driven Development Manager with excellent relationship management skills and who has effectively contributed to achieving organizational goals, enhancing organizational processes through initiatives geared towards lowering risk, heightening productivity & improving internal controls, with analytical bent of mind and proven track record of stamping success in uncertainties & challenges across SAP Fiori, SAPUI5, React, and full-stack development, with hands-on leadership in mobile app development using Flutter and Firebase.",
+            "Proven expertise in Agile and Scrum methodologies, leveraging DevOps practices to deliver high-quality products on time and within scope.",
+            "Adept at aligning development efforts with strategic business objectives, ensuring that products not only meet technical requirements but also deliver business value.",
+            "Skilled in team leadership, managing and mentoring a 13-member global team across multiple locations, while adapting communication and leadership styles to improve team performance.",
+            "Proficient in Node.js, .Net, Google Cloud Functions, and Azure DevOps for full-stack and cloud solutions.",
+            "Creator of the EVU (Event Management app) using Flutter for both Android and iOS, with a backend in Node.js deployed on Google Cloud Platform, showcasing entrepreneurial initiative.",
+            "Actively developing projects around OpenAI Assistants and Langchain, with demonstrated implementations on GitHub (OpenAI Assistant Project).",
+            "Responsibilities include team formation, project management, and delivery in both on-premise and cloud environments.",
+            "People’s Manager who leads by example; nurtures team members, fuels employee productivity & performance through impactful training, mentoring, and leveraging a motivational leadership style."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Skills",
+      "title": "Areas of Expertise",
+      "type": "multiColumnBulletedList",
+      "columnCount": 3,
+      "content": [
+        "Delivery Management",
+        "Product delivery",
+        "Team Management",
+        "SAPUI5",
+        "Fiori",
+        "UI5",
+        "Javascript",
+        "Typescript",
+        "ReactJs",
+        "Firebase",
+        "Google Cloud functions",
+        "Azure Devops",
+        "Langchain",
+        "OpenAI Functions",
+        "Flutter",
+        "NodeJs",
+        "BTP",
+        "SQL"
+      ]
+    },
+    {
+      "title": "NOTABLE ACCOMPLISHMENTS ACROSS THE CAREER",
+      "type": "default",
+      "items": [
+        {
+          "title": "",
+          "content": [
+            "Successfully led a 13-member global team, adapting communication and leadership style to manage cultural and geographical differences, improving team cohesion and project outcomes.",
+            "Collaborated closely with product management and stakeholders to align development efforts with business objectives, ensuring that products met customer needs and industry standards.",
+            "Highly appreciated for my role as a Manager in Vistex.",
+            "Designed, developed and delivered the UI of two of the vital products of Exa AG. The products act as the backbone of the sales strategy of the company."]
+        }
+      ]
+    },
+    {
+      "key": "Experience",
+      "title": "Work Experience (Total 15+ Years)",
+      "type": "default",
+      "items": [
+        {
+          "title": "2018-02 – Current, Development Manager, Vistex GmbH, Walldorf",
+          "content": [
+            "Development Manager, who has managed team of 13 Techies across 4 countries.",
+            "Responsible for setting up of Development Environments, setting up offshore Team, Recruitment across multiple Geographical locations, Project Management, Performance Review and Salary Negotiations",
+            "Actively involved in Architecture, Design and Development using SAPUI5/Fiori, Reactjs, Node, .Net, Azure Devops"
+          ]
+        },
+        {
+          "title": "2014-07 - 2018-01, SAPUI5/FIORI Architect, Exa AG in India and Germany",
+          "content": [
+            "Established and led UI architecture, design, and development for two key products utilizing SAPUI5/Fiori, OData, and SAP Screen Personas.",
+            "Enhanced onsite/offshore communication and collaboration, streamlining project execution and deliverables."
+          ]
+        },
+        {
+          "title": "2011-10 - 2014-07, Associate Consultant, HCL Technologies, India",
+          "content": [
+            "SAPUI5 and ABAP Developer"
+          ]
+        },
+        {
+          "title": "2009-05 - 2011-09, Associate Consultant, Wipro Technologies, India",
+          "content": [
+            "SAPUI5 and ABAP Developer"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Education",
+      "title": "ACADEMIC QUALIFICATIONS",
+      "type": "default",
+      "items": [
+        {
+          "title": "B. Tech: Electronics And Communication Engineering\t\t\t2004 - 2008",
+          "content": [
+            "Institute Of Engineering and Management – India."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Certification",
+      "title": "CERTIFICATION",
+      "type": "default",
+      "items": [
+        {
+          "title": "Togaf\t\t\t2017",
+          "content": [
+            "Togaf Certified Enterprise Architect"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Personal Details",
+      "type": "labelValue",
+      "items": [
+        {
+          "title": "",
+          "content": [{
+            "label": "Languages known",
+            "value": "English, Hindi, German (B1)"
+          }, {
+            "label": "Address",
+            "value": "Walldorf, 69190 Germany"
+          }
+          ]
+        }
+      ]
+    }
+  ]
+}

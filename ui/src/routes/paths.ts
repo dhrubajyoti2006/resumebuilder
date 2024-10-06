@@ -43,12 +43,8 @@ export const paths = {
   // DASHBOARD
   dashboard: {
     root: ROOTS.DASHBOARD,
-    two: `${ROOTS.DASHBOARD}/two`,
-    three: `${ROOTS.DASHBOARD}/three`,
-    group: {
-      root: `${ROOTS.DASHBOARD}/group`,
-      five: `${ROOTS.DASHBOARD}/group/five`,
-      six: `${ROOTS.DASHBOARD}/group/six`,
-    },
+    profile: `${ROOTS.DASHBOARD}/profile`,
+    resume: `${ROOTS.DASHBOARD}/resume`,
+    resumeTemplate: `${ROOTS.DASHBOARD}/resumeTemplate`,
   },
 };
