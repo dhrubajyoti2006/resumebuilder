@@ -12,41 +12,42 @@ import SkillSection from './SkillSection';
 import CertificationSection from './CertificationSection';
 
 // Import the data from the data file
-import {profileData} from "./data/profileData";
-// import {ProfileApiCall} from "../../apiCall/profile/ProfileApiCall";
+// import {profileData} from "./data/profileData";
+import {ProfileApiCall} from "../../apiCall/profile/ProfileApiCall";
 import {useEffect, useState} from "react";
+// import {useEffect, useState} from "react";
 
 
 export default function Profile() {
   // States for storing data, loading and error states
-  // const [profileData, setProfileData] = useState<any>(null);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [error, setError] = useState<string | null>(null);
-  //
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       // Call the ProfileApiCall.get method
-  //       const data = {}; // Replace this with any data you need to pass
-  //       const context = {}; // Replace this with actual context if needed
-  //       const response = await ProfileApiCall.get(data, context);
-  //       setProfileData(response.data);
-  //       setIsLoading(false);
-  //     } catch (err) {
-  //       setError('Failed to fetch profile data');
-  //       setIsLoading(false);
-  //     }
-  //   };
-  //
-  //   // Trigger the data fetching when the component mounts
-  //   fetchData();
-  // }, []);
-  //
-  // // Handle loading state
-  // if (isLoading) return <div>Loading...</div>;
-  //
-  // // Handle error state
-  // if (error) return <div>{error}</div>;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Call the ProfileApiCall.get method
+        const data = {}; // Replace this with any data you need to pass
+        const context = {}; // Replace this with actual context if needed
+        const response = await ProfileApiCall.get(data, context);
+        setProfileData(response.data);
+        setIsLoading(false);
+      } catch (err) {
+        setError('Failed to fetch profile data');
+        setIsLoading(false);
+      }
+    };
+
+    // Trigger the data fetching when the component mounts
+    fetchData();
+  }, []);
+
+  // Handle loading state
+  if (isLoading) return <div>Loading...</div>;
+
+  // Handle error state
+  if (error) return <div>{error}</div>;
   return (
     <DashboardContent>
        {/*<CustomBreadcrumbs*/}
