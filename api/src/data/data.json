@@ -49,6 +49,7 @@
       ]
     },
     {
+      "key": "Skills",
       "title": "Areas of Expertise",
       "type": "multiColumnBulletedList",
       "columnCount": 3,
@@ -88,6 +89,7 @@
       ]
     },
     {
+      "key": "Experience",
       "title": "Work Experience (Total 15+ Years)",
       "type": "default",
       "items": [
@@ -121,6 +123,7 @@
       ]
     },
     {
+      "key": "Education",
       "title": "ACADEMIC QUALIFICATIONS",
       "type": "default",
       "items": [
@@ -133,6 +136,7 @@
       ]
     },
     {
+      "key": "Certification",
       "title": "CERTIFICATION",
       "type": "default",
       "items": [
