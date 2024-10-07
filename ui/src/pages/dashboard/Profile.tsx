@@ -55,9 +55,9 @@ export default function Profile() {
        {/* links={[{name: ''}]}*/}
        {/*/>*/}
 
-       {/*<Card sx={{p: 3, mb: 3}}>*/}
-       {/* <UserDetailsSection data={profileData.headerData}/>*/}
-       {/*</Card>*/}
+       <Card sx={{p: 3, mb: 3}}>
+        <UserDetailsSection data={profileData.headerData}/>
+       </Card>
 
        <Card sx={{mb: 3}}>
         <CardHeader title="Experience" sx={{mb: 3}}/>
