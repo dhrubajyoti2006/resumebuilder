@@ -1,5 +1,6 @@
-import { ApiResponse } from '../ApiResponse';
 import { BaseApiCall } from '../BaseApiCall';
+
+import type { ApiResponse } from '../ApiResponse';
 
 class ProfileApiCall extends BaseApiCall {
   constructor() {

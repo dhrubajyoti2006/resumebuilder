@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import {ApiResponse} from './ApiResponse';
 
 class ApiManager {
@@ -43,7 +44,7 @@ class ApiManager {
       const resultsData = response.data;
 
       // Map messages from response
-      const messages: ApiMessage[] = (resultsData["messages"] || []).map(
+      const messages: ApiMessage[] = (resultsData.messages || []).map(
         (msg: any) => ApiMessage.fromJson(msg)
       );
 

@@ -1,20 +1,20 @@
-import {DashboardContent} from "../../layouts/dashboard";
-// import {CustomBreadcrumbs} from 'src/components/custom-breadcrumbs';
-import Divider from "@mui/material/Divider";
-import CardHeader from "@mui/material/CardHeader";
+// Import the data from the data file
+import {useState, useEffect} from "react";
+
 import Card from "@mui/material/Card";
 import Stack from "@mui/material/Stack";
+import Divider from "@mui/material/Divider";
+// import {CustomBreadcrumbs} from 'src/components/custom-breadcrumbs';
+import CardHeader from "@mui/material/CardHeader";
 
-import {UserDetailsSection} from "./UserDetailsSection";
-import ExperienceSection from "./ExperienceSection";
-import EducationSection from './EducationSection';
 import SkillSection from './SkillSection';
+import EducationSection from './EducationSection';
+import ExperienceSection from "./ExperienceSection";
+import {UserDetailsSection} from "./UserDetailsSection";
+import {DashboardContent} from "../../layouts/dashboard";
 import CertificationSection from './CertificationSection';
-
-// Import the data from the data file
 // import {profileData} from "./data/profileData";
 import {ProfileApiCall} from "../../apiCall/profile/ProfileApiCall";
-import {useEffect, useState} from "react";
 // import {useEffect, useState} from "react";
 
 
@@ -50,10 +50,10 @@ export default function Profile() {
   if (error) return <div>{error}</div>;
   return (
     <DashboardContent>
-       {/*<CustomBreadcrumbs*/}
-       {/* heading="Profile"*/}
-       {/* links={[{name: ''}]}*/}
-       {/*/>*/}
+       {/* <CustomBreadcrumbs */}
+       {/* heading="Profile" */}
+       {/* links={[{name: ''}]} */}
+       {/* /> */}
 
        <Card sx={{p: 3, mb: 3}}>
         <UserDetailsSection data={profileData.headerData}/>

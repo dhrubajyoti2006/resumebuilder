@@ -1,5 +1,6 @@
 class ApiResponse {
   data: any;
+
   messages: ApiMessage[];
 
   constructor(data: any, messages: ApiMessage[]) {

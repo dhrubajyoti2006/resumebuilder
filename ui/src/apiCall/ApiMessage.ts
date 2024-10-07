@@ -6,6 +6,7 @@ enum ApiMessageCode {
 
 class ApiMessage {
   code: ApiMessageCode;
+
   text: string;
 
   constructor(code: ApiMessageCode, text: string) {
@@ -15,8 +16,8 @@ class ApiMessage {
 
   static fromJson(json: any): ApiMessage {
     return new ApiMessage(
-      ApiMessageCode[json["code"] as keyof typeof ApiMessageCode],
-      json["text"]
+      ApiMessageCode[json.code as keyof typeof ApiMessageCode],
+      json.text
     );
   }
 }
