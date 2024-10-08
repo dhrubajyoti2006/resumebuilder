@@ -17,6 +17,7 @@
   },
   "sections": [
     {
+      "key": "objective",
       "title": "Objective",
       "type": "default",
       "items": [
@@ -29,6 +30,7 @@
       ]
     },
     {
+      "key": "profileSummary",
       "title": "Profile Summary",
       "type": "default",
       "items": [
