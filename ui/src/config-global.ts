@@ -38,7 +38,7 @@ export type ConfigValue = {
 
 export const CONFIG: ConfigValue = {
   site: {
-    name: 'Minimals',
+    name: 'Resume Builder',
     serverUrl: import.meta.env.VITE_SERVER_URL ?? '',
     assetURL: import.meta.env.VITE_ASSET_URL ?? '',
     basePath: import.meta.env.VITE_BASE_PATH ?? '',
@@ -49,7 +49,7 @@ export const CONFIG: ConfigValue = {
    * @method jwt | amplify | firebase | supabase | auth0
    */
   auth: {
-    method: 'jwt',
+    method: 'firebase',
     skip: false,
     redirectPath: paths.dashboard.root,
   },

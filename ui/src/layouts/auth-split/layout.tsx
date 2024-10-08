@@ -8,6 +8,8 @@ import { Section } from './section';
 import { Main, Content } from './main';
 import { HeaderBase } from '../core/header-base';
 import { LayoutSection } from '../core/layout-section';
+import {CONFIG} from "../../config-global";
+import {paths} from "../../routes/paths";
 
 // ----------------------------------------------------------------------
 
@@ -76,6 +78,13 @@ export function AuthSplitLayout({ sx, section, children }: AuthSplitLayoutProps)
           layoutQuery={layoutQuery}
           imgUrl={section?.imgUrl}
           subtitle={section?.subtitle}
+          methods={[
+            {
+              label: 'Firebase',
+              path: paths.auth.firebase.signIn,
+              icon: `${CONFIG.site.basePath}/assets/icons/platforms/ic-firebase.svg`,
+            },
+          ]}
         />
         <Content layoutQuery={layoutQuery}>{children}</Content>
       </Main>

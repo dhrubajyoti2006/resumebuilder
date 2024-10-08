@@ -43,6 +43,58 @@ const authJwt = {
   ],
 };
 
+/** **************************************
+ * Firebase
+ *************************************** */
+const Firebase = {
+  SignInPage: lazy(() => import('src/pages/auth/firebase/sign-in')),
+  SignUpPage: lazy(() => import('src/pages/auth/firebase/sign-up')),
+  VerifyPage: lazy(() => import('src/pages/auth/firebase/verify')),
+  ResetPasswordPage: lazy(() => import('src/pages/auth/firebase/reset-password')),
+};
+
+const authFirebase = {
+  path: 'firebase',
+  children: [
+    {
+      path: 'sign-in',
+      element: (
+        <GuestGuard>
+          <AuthSplitLayout section={{ title: 'Hi, Welcome back' }}>
+            <Firebase.SignInPage />
+          </AuthSplitLayout>
+        </GuestGuard>
+      ),
+    },
+    {
+      path: 'sign-up',
+      element: (
+        <GuestGuard>
+          <AuthSplitLayout>
+            <Firebase.SignUpPage />
+          </AuthSplitLayout>
+        </GuestGuard>
+      ),
+    },
+    {
+      path: 'verify',
+      element: (
+        <AuthSplitLayout>
+          <Firebase.VerifyPage />
+        </AuthSplitLayout>
+      ),
+    },
+    {
+      path: 'reset-password',
+      element: (
+        <AuthSplitLayout>
+          <Firebase.ResetPasswordPage />
+        </AuthSplitLayout>
+      ),
+    },
+  ],
+};
+
 // ----------------------------------------------------------------------
 
 export const authRoutes = [
@@ -53,6 +105,6 @@ export const authRoutes = [
         <Outlet />
       </Suspense>
     ),
-    children: [authJwt],
+    children: [authJwt, authFirebase],
   },
 ];
