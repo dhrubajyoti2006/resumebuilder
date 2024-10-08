@@ -36,8 +36,8 @@ class ApiManager {
       }
 
       // API call using axios
-      const response = await axios.get(
-        `http://localhost:3000/${collectionName}`, // Example URL to Firebase Function emulator
+      const response = await axios.post(
+        `${collectionName}`, // Example URL to Firebase Function emulator
         data
       );
 

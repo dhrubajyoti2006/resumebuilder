@@ -30,21 +30,29 @@ export const NewUserSchema = zod.object({
     .string()
     .min(1, { message: 'Email is required!' })
     .email({ message: 'Email must be a valid email address!' }),
+  objective: zod.string(),
+  profileSummary: zod.string(),
 });
 
 // ----------------------------------------------------------------------
 
 type Props = {
-  data: IUserItem;
+  data: {
+    headerData: IUserItem;
+    objective: string[];
+    profileSummary: string[];
+  }
 };
 
 export function UserDetailsSection({ data }: Props) {
   const defaultValues = useMemo(
     () => ({
-      imageUrl: data.imageUrl || null,
-      name: data.name || '',
-      tags: data.tags || '',
-      email: data.email || ''
+      imageUrl: data.headerData.imageUrl || null,
+      name: data.headerData.name || '',
+      tags: data.headerData.tags || '',
+      email: data.headerData.contact.email || '',
+      objective: data.objective.toString(),
+      profileSummary: data.profileSummary.toString()
     }),
     [data]
   );
@@ -129,10 +137,10 @@ export function UserDetailsSection({ data }: Props) {
       </Grid>
 
       <Typography variant="subtitle1" sx={{ mt: 3, mb: 2 }}>Tagline</Typography>
-      <TagsSection data={data.tags}/>
+      <TagsSection data={data.headerData.tags}/>
 
       <Typography variant="subtitle1" sx={{ mt: 3, mb: 2 }}>About</Typography>
-      <Field.Editor name="about" sx={{ maxHeight: 680 }} />
+      <Field.Editor name="objective" sx={{ maxHeight: 680 }} />
 
       <Typography variant="subtitle1" sx={{ mt: 3, mb: 2 }}>Profile Summary</Typography>
       <Field.Editor name="profileSummary" sx={{ maxHeight: 680 }} />

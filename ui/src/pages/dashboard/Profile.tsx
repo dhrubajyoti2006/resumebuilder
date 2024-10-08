@@ -28,10 +28,14 @@ export default function Profile() {
     const fetchData = async () => {
       try {
         // Call the ProfileApiCall.get method
-        const data = {}; // Replace this with any data you need to pass
+        const data = {
+          "data": {
+            "key": "value"
+          }
+        }; // Replace this with any data you need to pass
         const context = {}; // Replace this with actual context if needed
         const response = await ProfileApiCall.get(data, context);
-        setProfileData(response.data);
+        setProfileData(response.data?.result?.data);
         setIsLoading(false);
       } catch (err) {
         setError('Failed to fetch profile data');
@@ -56,7 +60,11 @@ export default function Profile() {
        {/* /> */}
 
        <Card sx={{p: 3, mb: 3}}>
-        <UserDetailsSection data={profileData.headerData}/>
+        <UserDetailsSection data={{
+          headerData: profileData.headerData,
+          objective: profileData.sections.find(section => section.key === 'objective').items[0].content,
+          profileSummary: profileData.sections.find(section => section.key === 'profileSummary').items[0].content}
+        }/>
        </Card>
 
        <Card sx={{mb: 3}}>

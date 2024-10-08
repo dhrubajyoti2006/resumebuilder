@@ -29,6 +29,7 @@ export const profileData = {
       ]
     },
     {
+      "key": "profileSummary",
       "title": "Profile Summary",
       "type": "default",
       "items": [
