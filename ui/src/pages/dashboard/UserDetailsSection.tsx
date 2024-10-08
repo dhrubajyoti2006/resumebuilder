@@ -24,12 +24,12 @@ import {fData} from "../../utils/format-number";
 export type NewUserSchemaType = zod.infer<typeof NewUserSchema>;
 
 export const NewUserSchema = zod.object({
-  imageUrl: schemaHelper.file({ message: { required_error: 'Avatar is required!' } }),
-  name: zod.string().min(1, { message: 'Name is required!' }),
+  imageUrl: schemaHelper.file({message: {required_error: 'Avatar is required!'}}),
+  name: zod.string().min(1, {message: 'Name is required!'}),
   email: zod
     .string()
-    .min(1, { message: 'Email is required!' })
-    .email({ message: 'Email must be a valid email address!' }),
+    .min(1, {message: 'Email is required!'})
+    .email({message: 'Email must be a valid email address!'}),
   objective: zod.string(),
   profileSummary: zod.string(),
 });
@@ -44,7 +44,7 @@ type Props = {
   }
 };
 
-export function UserDetailsSection({ data }: Props) {
+export function UserDetailsSection({data}: Props) {
   const defaultValues = useMemo(
     () => ({
       imageUrl: data.headerData.imageUrl || null,
@@ -67,7 +67,7 @@ export function UserDetailsSection({ data }: Props) {
     reset,
     watch,
     handleSubmit,
-    formState: { isSubmitting },
+    formState: {isSubmitting},
   } = methods;
 
   const values = watch();
@@ -87,17 +87,17 @@ export function UserDetailsSection({ data }: Props) {
     <Form methods={methods} onSubmit={onSubmit}>
       <Grid container spacing={3} sx={{m: 1}}>
         <Grid xs={12} md={4}>
-          <Card sx={{ pt: 10, pb: 5, px: 3 }}>
+          <Card sx={{pt: 10, pb: 5, px: 3}}>
             {data && (
               <Label
                 color={(values.status === 'active' && 'success') || (values.status === 'banned' && 'error') || 'warning'}
-                sx={{ position: 'absolute', top: 24, right: 24 }}
+                sx={{position: 'absolute', top: 24, right: 24}}
               >
                 {values.status}
               </Label>
             )}
 
-            <Box sx={{ mb: 5 }}>
+            <Box sx={{mb: 5}}>
               <Field.UploadAvatar
                 name="imageUrl"
                 maxSize={3145728}
@@ -113,7 +113,7 @@ export function UserDetailsSection({ data }: Props) {
                     }}
                   >
                     Allowed *.jpeg, *.jpg, *.png, *.gif
-                    <br /> max size of {fData(3145728)}
+                    <br/> max size of {fData(3145728)}
                   </Typography>
                 }
               />
@@ -121,31 +121,31 @@ export function UserDetailsSection({ data }: Props) {
           </Card>
         </Grid>
 
-        <Grid xs={12} md={8}>
-          <Card sx={{ p: 3 }}>
+        <Grid xs={12} md={8} sx={{pl: 3, pr: 3}}>
+          <Card sx={{p: 3}}>
             <Box
               rowGap={3}
               columnGap={2}
               display="grid"
-              gridTemplateColumns={{ xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' }}
+              gridTemplateColumns={{xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)'}}
             >
-              <Field.Text name="name" label="Full name" />
-              <Field.Text name="email" label="Email address" />
+              <Field.Text name="name" label="Full name"/>
+              <Field.Text name="email" label="Email address"/>
             </Box>
           </Card>
         </Grid>
       </Grid>
 
-      <Typography variant="subtitle1" sx={{ mt: 3, mb: 2 }}>Tagline</Typography>
+      <Typography variant="subtitle1" sx={{mt: 3, mb: 2}}>Tagline</Typography>
       <TagsSection data={data.headerData.tags}/>
 
-      <Typography variant="subtitle1" sx={{ mt: 3, mb: 2 }}>About</Typography>
-      <Field.Editor name="objective" sx={{ maxHeight: 680 }} />
+      <Typography variant="subtitle1" sx={{mt: 3, mb: 2}}>About</Typography>
+      <Field.Editor name="objective" sx={{maxHeight: 680}}/>
 
-      <Typography variant="subtitle1" sx={{ mt: 3, mb: 2 }}>Profile Summary</Typography>
-      <Field.Editor name="profileSummary" sx={{ maxHeight: 680 }} />
+      <Typography variant="subtitle1" sx={{mt: 3, mb: 2}}>Profile Summary</Typography>
+      <Field.Editor name="profileSummary" sx={{maxHeight: 680}}/>
 
-      <Stack alignItems="flex-end" sx={{ mt: 3 }}>
+      <Stack alignItems="flex-end" sx={{mt: 3}}>
         <LoadingButton type="submit" variant="contained" loading={isSubmitting}>
           {data ? 'Save changes' : 'Create user'}
         </LoadingButton>
