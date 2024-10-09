@@ -48,6 +48,7 @@
     "@tiptap/starter-kit": "^2.4.0",
     "autosuggest-highlight": "^3.3.4",
     "axios": "^1.7.2",
+    "common-types": "^1.0.0",
     "dayjs": "^1.11.11",
     "framer-motion": "^11.2.10",
     "history": "^5.3.0",

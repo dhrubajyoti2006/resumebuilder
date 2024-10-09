@@ -25,6 +25,9 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
   },
+  "paths": {
+    "common-types": ["../common-types/index"]
+  },
   "include": [
     "**/*.ts",
     "**/*.tsx",

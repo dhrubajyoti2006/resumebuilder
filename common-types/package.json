@@ -1,7 +1,8 @@
 {
-  "name": "api",
+  "name": "common-types",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,10 +10,5 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
-    "firebase-tools": "^13.20.2"
-  },
-  "dependencies": {
-    "common-types": "^1.0.0"
-  }
+  "private": true
 }
